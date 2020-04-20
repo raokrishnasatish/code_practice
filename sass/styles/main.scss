@@ -5,7 +5,7 @@ $colors: (primary: #005DFF,
     contrast: #FFFFFF,
 );
 
-@padding: 15px;
+$padding: 15px;
 
 @function color($color_name) {
     @return map-get($colors, $color_name);
@@ -104,7 +104,7 @@ body {
                         position: absolute;
                         width: 30px;
                         height: 30px;
-                        background-color: map-get($map: $colors, $key: primary-light);
+                        background-color: color(primary-light);
                         border-radius: 50%;
                         margin-right: 10px;
                     }
@@ -149,12 +149,12 @@ body {
             }
 
             a {
-                color: map-get($colors, primary-dark);
+                color: color(primary-dark);
                 text-decoration: none;
                 text-transform: uppercase;
                 font-weight: bold;
                 border-radius: 15px;
-                background-color: map-get($map: $colors, $key: ascent);
+                background-color: color(ascent);
                 padding: 15px;
                 margin: 50px auto 0 auto;
                 display: block;
