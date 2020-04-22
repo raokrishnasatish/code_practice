@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/bbf4194a22.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./scripts.js"></script>
+
+</head>
+
+<body onload="renderImage()">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Preloader loads the images upfront so enable smooth transitions-->
+    <div id="preloader">
+        <img src="images/ny.jpg" width="1" height="1" />
+        <img src="images/la.jpg" width="1" height="1" />
+        <img src="images/chicago.jpg" width="1" height="1" />
+    </div>
+
+    <!-- Menu bar holds the menu items-->
+    <div id="menu-bar">
+        <div class="menu-item">Home</div>
+        <div class="menu-item">Band</div>
+        <div class="menu-item">Tour</div>
+        <div class="menu-item">Contact</div>
+        <div class="menu-item">More <i class="fas fa-caret-down"></i></div>
+        <div class="menu-item search-icon">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <!-- This is the div that holds the carousal-->
+    <div id="imgHolder">
+        <img class="carousal_img fadein" src="images/ny.jpg" />
+    </div>
+
+    <!-- This hold the first band introduction element-->
+    <div class="grid-container1">
+        <div class="grid-item1">
+            <div class="section-headers">
+                <h2>The Band</h2>
+            </div>
+            <p class="tag-line">We love music</p>
+            <p class="body-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="grid-item2">
+            Name
+            <img class="grid-thumbs" src="images/bandmember.jpg" />
+        </div>
+        <div class="grid-item3">
+            Name
+            <img class="grid-thumbs" src="images/bandmember.jpg" />
+        </div>
+        <div class="grid-item4">
+            Name
+            <img class="grid-thumbs" src="images/bandmember.jpg" />
+        </div>
+    </div>
+    <div class="tour">
+        <div class="grid-container2">
+            <div class="grid-item-2-1">
+                <h2 class="section-headers">Tour Dates</h2>
+                <p class="tag-line">Remember to book your tickets!</p>
+                <ul>
+                    <li>September<span class="sale-status">Sold Out</span></li>
+                    <li>October<span class="sale-status">Sold Out</span></li>
+                    <li>November <span class="status-caret">3</span></li>
+                </ul>
+            </div>
+            <div class="grid-item-2-2">
+                <img src="images/newyork.jpg" />
+                <p class="city">New York</p>
+                <p class="date">Fri 27 Nov 2016</p>
+                <p class="caption">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                <button class="buy-tickets">Buy Tickets</button>
+            </div>
+            <div class="grid-item-2-3">
+                <img src="images/paris.jpg" />
+                <p class="city">Paris</p>
+                <p class="date">Sat 28 Nov 2016</p>
+                <p class="caption">Praesent tincidunt sed tellus ut rutrum sed vitae justo</p>
+                <button class="buy-tickets">Buy Tickets</button>
+            </div>
+            <div class="grid-item-2-4">
+                <img src="images/sanfran.jpg" />
+                <p class="city">San Francisco</p>
+                <p class="date">Sun 29 Nov 2016</p>
+                <p class="caption">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                <button class="buy-tickets">Buy Tickets</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <div class=contact-container>
+            <div class="contact-item-1">
+                <h2 class="section-headers">CONTACT</h2>
+                <p class="tag-line">Fan? Drop a note!</p>
+            </div>
+
+            <div class="contact-item-2">
+                <p><span><i class="fas fa-map-marker-alt"></i></span>Chicago, US</p>
+                <p><span><i class="fas fa-phone-square-alt"></i></span>Phone: +00 151515</p>
+                <p><span><i class="fas fa-envelope-square"></i></span>Email: mail@mail.com</p>
+            </div>
+
+            <div class="contact-item-3">
+                    <form class="form-set">
+                        <input class="form-inputs" id="name" name="name" type="text" placeholder="Name" />
+                        <input class="form-inputs" id="email" name="email" type="text" placeholder="E-Mail" />
+                        <input id="message" name="message" type="text" placeholder="Enter a Message" />
+                        <button type="button" name="btn-send" id="btn-send">Send</button>
+                    </form>
+                    
+            </div>
+        </div>
+    </div>
+
+    <div class="map">
+        <img src="images/map.jpg" />
+    </div>
+
+    <div class="social">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-snapchat-square"></i>
+        <i class="fab fa-instagram-square"></i>
+        <i class="fab fa-pinterest-square"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-linkedin"></i>
+        <p>Powered by Satish Rao</p>
+    </div>
+</body>
+
+</html>
