@@ -1,0 +1,464 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #777;
+    font-size: 16px;
+}
+
+.main-image {
+    height: 400px;
+    position: relative;
+    top: -15px;
+
+
+    .child-image-frame {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        /* fallback color */
+        background-image: url("../images/parallax1.jpg");
+        background-position: center;
+        background-size: cover;
+        opacity: 0.75;
+    }
+}
+
+.menu-container-1 {
+    position: absolute;
+    top: 0px;
+    display: "grid";
+    grid-template-rows: auto;
+    grid-template-columns: 10% 10% 10% 10% auto;
+    grid-template-areas: "item-1 item-2 item-3 item-4 item-5";
+    width: 100%;
+    height: 40px;
+
+    .menu-item-1,
+    .menu-item-2,
+    .menu-item-3,
+    .menu-item-4,
+    .menu-item-5 {
+        width: fit-content;
+        height: 40px;
+        display: inline-block;
+        box-sizing: border-box;
+        text-align: left;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        font-size: 1rem;
+
+        span {
+            margin: 5px;
+        }
+
+        &:hover {
+            background-color: #ccc;
+        }
+
+    }
+
+    .menu-item-1 {
+        grid-area: item-1;
+    }
+
+    .menu-item-2 {
+        grid-area: item-2;
+    }
+
+    .menu-item-3 {
+        grid-area: item-3;
+    }
+
+    .menu-item-4 {
+        grid-area: item-4;
+    }
+
+    .menu-item-5 {
+        grid-area: item-5;
+        justify-items: center;
+        max-width: 50px;
+        float: right;
+
+        &:hover {
+            background-color: rgb(252, 92, 92);
+        }
+    }
+}
+
+.header {
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.tag-line {
+    font-style: italic;
+    text-align: center;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "content-item-1 content-item-1"
+        "content-item-2 content-item-3"
+        "content-item-4 content-item-4";
+    width: 70%;
+    margin: auto;
+
+    .about-content-item-1 {
+        grid-area: content-item-1;
+        text-align: center;
+        padding-top: 40px;
+
+        .content-body {
+            text-align: justify;
+        }
+    }
+
+    .about-content-item-2 {
+        grid-area: content-item-2;
+
+        .mini-header {
+            font-size: .9rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+    }
+
+    .about-content-item-3 {
+        grid-area: content-item-3;
+        text-align: justify;
+    }
+
+    .about-content-item-4 {
+        grid-area: content-item-4;
+        margin: 25px;
+
+        h4 {
+            text-align: center;
+        }
+
+        .progress-bar {
+            background-color: #f1f1f1 !important;
+            width: 100%;
+            height: 30px;
+            margin-bottom: 20px;
+        }
+
+        .progress-1 {
+            background-color: #616161 !important;
+            width: 90%;
+            height: 30px;
+            text-align: center;
+            color: white;
+
+            p {
+                padding: 5px;
+                letter-spacing: 0px;
+            }
+        }
+
+        .progress-2 {
+            background-color: #616161 !important;
+            width: 85%;
+            height: 30px;
+            text-align: center;
+            color: white;
+
+            p {
+                padding: 5px;
+                letter-spacing: 0px;
+            }
+        }
+
+        .progress-3 {
+            background-color: #616161 !important;
+            width: 75%;
+            height: 30px;
+            text-align: center;
+            color: white;
+
+            p {
+                padding: 5px;
+                letter-spacing: 0px;
+            }
+        }
+
+        .interest-cat {
+            letter-spacing: 10px;
+        }
+
+    }
+
+}
+
+.portifolio {
+
+    .port-stats {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas:
+            "data-1 data-2 data-3 data-4"
+            "data-5 data-5 data-5 data-5";
+        background-color: #616161 !important;
+        width: 100%;
+        color: white;
+
+        .stat-data-1 {
+            grid-area: data-1;
+            margin: auto;
+            font-size: 1.3em;
+            text-align: center;
+        }
+
+        .stat-data-2 {
+            grid-area: data-2;
+            margin: auto;
+            font-size: 1.3em;
+            text-align: center;
+        }
+
+        .stat-data-3 {
+            grid-area: data-3;
+            margin: auto;
+            font-size: 1.3em;
+            text-align: center;
+        }
+
+        .stat-data-4 {
+            grid-area: data-4;
+            margin: auto;
+            font-size: 1.3em;
+            text-align: center;
+        }
+    }
+
+    .port-main {
+        height: 400px;
+
+
+        .port-images {
+            grid-area: data-5;
+            background-image: url("../images/parallax2.jpg");
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            opacity: 0.75;
+
+        }
+    }
+}
+
+.my-work {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas:
+        "content"
+        "gallery"
+        "more";
+
+
+    .work-content {
+        grid-area: content;
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+
+    .work-gallery {
+        grid-area: gallery;
+        margin: auto;
+        width: 80%;
+
+
+        img {
+            width: 240px;
+            margin: 5px;
+        }
+
+    }
+
+    .load-more {
+        grid-area: more;
+        margin: auto;
+
+        button {
+            width: 150px;
+            height: 50px;
+            background-color: #f1f1f1 !important;
+            border-style: none;
+            text-transform: uppercase;
+            margin-top: 30px;
+            margin-bottom: 100px;
+            cursor: pointer;
+
+        }
+    }
+}
+
+.modal-window {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+
+}
+
+.modal-content {
+    background-color: black;
+    margin: auto;
+    border: 1px solid #888;
+    width: 100%;
+    height: 100%;
+
+    #modal-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 100px;
+    }
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    margin-right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.third-parallax {
+
+
+    .third-parallax-image {
+        background-image: url("../images/parallax3.jpg");
+        min-height: 400px;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center;
+        opacity: 0.75;
+        background-size: cover;
+
+    }
+}
+
+.footer {
+    text-align: center;
+    background-color: grey;
+    height: 200px;
+    padding: 10px;
+
+    &:hover {
+        background-color: black;
+    }
+
+    .go-top {
+        width: 150px;
+        height: 50px;
+        border-collapse: none;
+        display: block;
+        margin: 10px auto;
+
+    }
+
+    .social {
+        margin-top: 60px;
+        color: white;
+    }
+}
+
+.contact {
+    width: 70%;
+    margin: auto;
+
+}
+
+.contact-area {
+    display: flex;
+    margin: auto;
+
+    .map {
+        margin: auto;
+        width: 30%;
+
+
+        img {
+            width: 100%;
+            display: inline-block;
+            padding: 10px;
+            box-sizing: border-box;
+
+        }
+    }
+
+    .contact-path {
+        width: 70%;
+
+        .contact-detail {
+            padding: 15px;
+
+            span{
+                margin-right: 15px;;
+            }
+        }
+        .contact-form {
+            
+            .half-box {
+                width: 50%;
+                margin:auto;
+                display: inline-flex;
+            }
+            .form-elements {
+                width: 100%;
+                height: 40px;
+                box-sizing: border-box;
+                padding: 5px;
+                margin: 5px;
+            }
+        
+
+            #message {
+                width: 100%;
+                height: 40px;
+                box-sizing: border-box; 
+                padding: 5px;
+                margin: 5px;
+            }
+
+            button {
+                width: 150px;
+                height: 50px;
+                background-color: black;
+                border-collapse: collapse;
+                color: white;
+                font-size: 1em;
+                float: right;
+            }
+
+        }
+
+
+    }
+}
