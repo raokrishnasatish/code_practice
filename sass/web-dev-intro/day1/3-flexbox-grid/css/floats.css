@@ -76,6 +76,16 @@ a {
 	margin: 0px;
 }
 
+.col-5-bg {
+	background-color: #80cbc4;
+	padding: 1% 0%;
+}
+
+.col-5 > img {
+	width: 100%;
+	margin: 0px;
+}
+
 .article-title, .article-text, .article-more {
 	padding: 0% 2%;
 }
@@ -105,6 +115,15 @@ a {
 		flex: 0 0 96%;
 	}
 
+	.col-5 {
+		flex: 0 0 96%;
+		order: -2
+	}
+
+	.col-6 {
+		flex: 0 0 47%;
+	}
+
 }
 
 
@@ -126,6 +145,15 @@ a {
 	.col-4 {
 		flex: 0 0 96%;
 	}
+
+	.col-5 {
+		flex: 0 0 96%;
+		order: -2
+	}
+
+	.col-6 {
+		flex: 0 0 47%;
+	}
 }
 /* Desktop screen Sizes - size lg and beyond*/
 @media only screen and (min-width: 960px) {
@@ -145,5 +173,11 @@ a {
 	.col-4 {
 		flex: 0 0 96%;
 	}
+
+	.col-5 {
+		flex: 0 0 47%;
+	}
+
+	
 	
 }
