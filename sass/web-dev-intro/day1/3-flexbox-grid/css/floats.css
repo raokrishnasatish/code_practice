@@ -178,6 +178,12 @@ a {
 		flex: 0 0 47%;
 	}
 
-	
+	.row-reverse {
+		flex-direction: row-reverse;
+	}
+
+	.row-reverse [class*="col-1"] {
+		margin: 1% 2% 1% 0%;
+	}
 	
 }
