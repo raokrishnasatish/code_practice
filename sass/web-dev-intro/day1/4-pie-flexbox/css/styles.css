@@ -1,0 +1,63 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	font-family: "Cabin", Arial, Geneva, sans-serif;
+	background-image: url(../img/clouds.png);
+	margin: 0px;
+	padding: 0px;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Niconne', cursive;
+  font-weight: normal;
+  color: #C80060;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 97%;
+  max-width: 1200px;
+}
+
+.menu-row > ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  background-color: #e6bf98;
+  padding: 0.75em;
+  margin: 12px 0 0 0;
+  border-bottom: 3px solid #cc8850;
+}
+
+.menu-row > ul > li > a {
+  text-decoration: none;
+  color: #C80060;
+}
+
+.menu-row > ul > li > a:hover{
+  color: #65cdd2;
+}
+
+.content-row {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #fff6e0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+}
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 550px) and (max-width: 849px) { 
+  
+
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 850px) { 
+  
+}

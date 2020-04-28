@@ -1,0 +1,230 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-image: url("../images/bg-intro-desktop.png");
+  background-color: #ff7a7a;
+  color: white;
+}
+
+/* grid system -- mobile first! */
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.col-1 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 92%;
+          flex: 0 0 92%;
+  font-size: 0.7rem;
+}
+
+.col-1 h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.col-1 p {
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+.col-1 .advt {
+  border-radius: 5px;
+  background-color: #6055a5;
+  height: 40px;
+  margin-bottom: 20px;
+  border: 1px solid #6055a5;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.26);
+          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.26);
+}
+
+.col-1 .advt p {
+  margin-top: 8px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.col-1 .advt p span {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.col-1 .form-div {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.col-1 .form-div #sub_form {
+  padding: 10px auto;
+}
+
+.col-1 .form-div #sub_form .form_elements {
+  display: block;
+  width: 100%;
+  line-height: 17%;
+  border: 1px solid #b9b6d3;
+  border-radius: 5px;
+  padding: 10px 5px;
+  font-size: 1.4em;
+  margin: 10px 0px;
+}
+
+.col-1 .form-div #sub_form > button {
+  height: 40px;
+  background-color: #38cc8c;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.26);
+          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.26);
+  text-transform: capitalize;
+}
+
+.col-1 .terms-notice {
+  color: #b9b6d3;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.col-1 .terms-notice span {
+  color: #ff7a7a;
+}
+
+.attribution {
+  font-size: .6rem;
+  text-align: center;
+}
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 375px) and (max-width: 440px) {
+  .col-1 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 96%;
+            flex: 0 0 96%;
+    font-size: 0.7rem;
+  }
+  .col-1 h1 {
+    font-size: 3em;
+  }
+  .col-1 p {
+    font-size: 1.6em;
+  }
+  .col-1 .advt {
+    height: 50px;
+  }
+  .col-1 .advt p {
+    font-size: 1.2em;
+  }
+  .col-1 .form-div #sub_form .form_elements {
+    line-height: 20%;
+    padding: 15px 5px;
+    font-size: 1.6em;
+  }
+  .col-1 .form-div #sub_form > button {
+    height: 50px;
+  }
+  .col-1 .terms-notice {
+    font-size: 1em;
+  }
+  .attribution {
+    font-size: .8rem;
+  }
+}
+
+/* Mobile Landscape & Tablet Potrait Screen Sizes */
+@media only screen and (min-width: 441px) and (max-width: 680px) {
+  .row {
+    margin-top: 100px;
+  }
+  .col-1 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 47%;
+            flex: 0 0 47%;
+    font-size: 0.7rem;
+  }
+  .col-1 h1 {
+    font-size: 3em;
+  }
+  .col-1 p {
+    font-size: 1.6em;
+  }
+  .col-1 .advt {
+    height: 50px;
+  }
+  .col-1 .advt p {
+    font-size: 1.2em;
+  }
+  .col-1 .form-div #sub_form .form_elements {
+    line-height: 20%;
+    padding: 15px 5px;
+    font-size: 1.6em;
+  }
+  .col-1 .form-div #sub_form > button {
+    height: 50px;
+  }
+  .col-1 .terms-notice {
+    font-size: 1em;
+  }
+  .attribution {
+    font-size: .8rem;
+  }
+}
+
+/* Desktop Screen Sizes */
+@media only screen and (min-width: 681px) {
+  .row {
+    margin-top: 100px;
+  }
+  .col-1 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 47%;
+            flex: 0 0 47%;
+    font-size: 0.75rem;
+  }
+  .col-1 h1 {
+    font-size: 3em;
+  }
+  .col-1 p {
+    font-size: 1.6em;
+  }
+  .col-1 .advt {
+    height: 50px;
+  }
+  .col-1 .advt p {
+    font-size: 1em;
+  }
+  .col-1 .form-div #sub_form .form_elements {
+    line-height: 20%;
+    padding: 15px 5px;
+    font-size: 1.6em;
+  }
+  .col-1 .form-div #sub_form > button {
+    height: 50px;
+  }
+  .col-1 .terms-notice {
+    font-size: 1em;
+  }
+  .attribution {
+    font-size: .8rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

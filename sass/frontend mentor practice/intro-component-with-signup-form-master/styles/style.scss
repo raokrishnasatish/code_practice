@@ -1,0 +1,286 @@
+$primary_red: hsl(0, 100%, 74%);
+$primary_green: hsl(154, 59%, 51%);
+$dark_primary_green: darken(hsl(154, 59%, 51%), 40%);
+$primary_blue: hsl(248, 32%, 49%);
+$neutral_darkBlue: hsl(249, 10%, 26%);
+$neutral_greyishBlue: hsl(246, 25%, 77%);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("../images/bg-intro-desktop.png");
+    background-color: $primary_red;
+    color: white;
+}
+
+
+/* grid system -- mobile first! */
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.col-1 {
+
+    flex: 0 0 92%;
+    font-size: 0.7rem;
+
+    h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.2em;
+        text-align: justify;
+    }
+
+    .advt {
+        border-radius: 5px;
+        background-color: $primary_blue;
+        height: 40px;
+        margin-bottom: 20px;
+        border: 1px solid $primary_blue;
+        box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.26);
+
+
+
+        p {
+            margin-top: 8px;
+            font-size: 1em;
+            text-align: center;
+
+            span {
+                font-weight: bold;
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    .form-div {
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+
+
+        #sub_form {
+            padding: 10px auto;
+
+
+            .form_elements {
+                display: block;
+                width: 100%;
+                line-height: 17%;
+                border: 1px solid $neutral_greyishBlue;
+                border-radius: 5px;
+                padding: 10px 5px;
+                font-size: 1.4em;
+                margin: 10px 0px;
+            }
+
+            &>button {
+                height: 40px;
+                background-color: $primary_green;
+                box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.26);
+                text-transform: capitalize;
+            }
+        }
+
+    }
+
+    .terms-notice {
+        color: $neutral_greyishBlue;
+        font-size: 0.8em;
+        text-align: center;
+
+        span {
+            color: $primary_red;
+        }
+    }
+
+}
+
+.attribution {
+    font-size: .6rem;
+    text-align: center;
+}
+
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 375px) and (max-width: 440px) {
+
+    .col-1 {
+
+        flex: 0 0 96%;
+        font-size: 0.7rem;
+    
+        h1 {
+            font-size: 3em;
+        }
+    
+        p {
+            font-size: 1.6em;
+        }
+    
+        .advt {
+            height: 50px; 
+    
+            p {
+                font-size: 1.2em;
+            }
+        }
+    
+        .form-div {
+    
+            #sub_form {
+
+                .form_elements {
+                    line-height: 20%;
+                    padding: 15px 5px;
+                    font-size: 1.6em;
+                }
+    
+                &>button {
+                    height: 50px;
+                }
+            }
+    
+        }
+    
+        .terms-notice {
+            font-size: 1em;
+        }
+    
+    }
+    
+    .attribution {
+        font-size: .8rem;
+    }
+
+}
+
+/* Mobile Landscape & Tablet Potrait Screen Sizes */
+@media only screen and (min-width: 441px) and (max-width: 680px) {
+
+    .row {
+        margin-top: 100px;
+    }
+
+    .col-1 {
+
+        flex: 0 0 47%;
+        font-size: 0.7rem;
+    
+        h1 {
+            font-size: 3em;
+        }
+    
+        p {
+            font-size: 1.6em;
+        }
+    
+        .advt {
+            height: 50px; 
+    
+            p {
+                font-size: 1.2em;
+            }
+        }
+    
+        .form-div {
+    
+            #sub_form {
+
+                .form_elements {
+                    line-height: 20%;
+                    padding: 15px 5px;
+                    font-size: 1.6em;
+                }
+    
+                &>button {
+                    height: 50px;
+                }
+            }
+    
+        }
+    
+        .terms-notice {
+            font-size: 1em;
+        }
+    
+    }
+    
+    .attribution {
+        font-size: .8rem;
+    }
+
+}
+
+
+/* Desktop Screen Sizes */
+@media only screen and (min-width: 681px) {
+
+    .row {
+        margin-top: 100px;
+    }
+
+    .col-1 {
+
+        flex: 0 0 47%;
+        font-size: 0.75rem;
+    
+        h1 {
+            font-size: 3em;
+        }
+    
+        p {
+            font-size: 1.6em;
+        }
+    
+        .advt {
+            height: 50px; 
+    
+            p {
+                font-size: 1em;
+            }
+        }
+    
+        .form-div {
+    
+            #sub_form {
+
+                .form_elements {
+                    line-height: 20%;
+                    padding: 15px 5px;
+                    font-size: 1.6em;
+                }
+    
+                &>button {
+                    height: 50px;
+                }
+            }
+    
+        }
+    
+        .terms-notice {
+            font-size: 1em;
+        }
+    
+    }
+    
+    .attribution {
+        font-size: .8rem;
+    }
+
+}
