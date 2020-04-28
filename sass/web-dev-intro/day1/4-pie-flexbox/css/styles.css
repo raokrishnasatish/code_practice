@@ -1,3 +1,5 @@
+
+/* start of presets */
 @charset "UTF-8";
 html {
   box-sizing: border-box;
@@ -5,59 +7,226 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
 body {
 	font-family: "Cabin", Arial, Geneva, sans-serif;
 	background-image: url(../img/clouds.png);
 	margin: 0px;
 	padding: 0px;
 }
-h1,h2,h3,h4,h5,h6 {
+
+/* End of Presets*/
+
+h2,h3 {
   font-family: 'Niconne', cursive;
   font-weight: normal;
   color: #C80060;
 }
+
 .wrapper {
-  margin: 0 auto;
-  width: 97%;
-  max-width: 1200px;
+	margin: 0 auto;
+}
+article img {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 250px;
 }
 
-.menu-row > ul {
-  display: flex;
-  flex-flow: row wrap;
+nav {
+  background: url(../img/scallop.png) repeat-x;
+}
+
+.menu-list {
   list-style-type: none;
-  background-color: #e6bf98;
-  padding: 0.75em;
+  background-color: #e6bf98; 
+  padding: .75em;
   margin: 12px 0 0 0;
   border-bottom: 3px solid #cc8850;
+  height: 160px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+
 }
 
-.menu-row > ul > li > a {
+.flx-menu-item {
+  padding: 0.3em;
+}
+
+nav a {
+  color: #c80060;
   text-decoration: none;
-  color: #C80060;
+  display: block;
+  padding-left:3.333333%;
+}
+nav a:hover {
+  color:#00c4c7;
 }
 
-.menu-row > ul > li > a:hover{
-  color: #65cdd2;
+
+.row:before, 
+.row:after {
+    content:"";
+    display: table;
+    clear:both;
 }
 
 .content-row {
+  background-color: #fff6e0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 1em;
   display: flex;
   flex-flow: row wrap;
-  background-color: #fff6e0;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  justify-content: flex-start;
+}
 
+.floatright {
+  float: right;
+  margin-left: 10px;
+}
+
+.col-3 {
+  text-align: justify;
+  margin: 0% 1%;
+}
+
+[class*='sidebar'] {
+  border: 1px solid #00c4c7;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  margin-top: 2.5em;
+}
+[class*='sidebar'] h3 {
+  margin: 0;    
+  color: white;
+  background-color: #00c4c7;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-left: 0.5em;
+}
+[class*='sidebar'] img {
+  border-radius: 0px 0px 10px 10px;
+  width: 100%;
+  max-width: 250px;
+  display: block; /* without this, there is a gap between the image and border -- space for descenders in text, for inline elements */
+} 
+.sidebar-secondary {
+  border-color: #c80060;
+}
+.sidebar-secondary h3 {
+  background-color: #c80060;
+}
+blockquote {
+  padding: 0em;
+  margin: 0;
+}
+blockquote p, 
+blockquote cite {
+  padding: 0 1em;
+}
+blockquote cite {
+  text-transform: uppercase;
+  font-style: normal;
+  padding-bottom: 1em;
+  display: block;
+}
+footer {
+  background-color: #00CDD1;
+  color: white;
+  clear: both;
+  margin: 0 0.5em 3em 0.5em;
+}
+footer p {
+  text-align: center;
+}
+footer img {
+  width: 52px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+[class*=‘col’] {
+  margin-left: 0;
+}
+  .col-1,
+  .col-3 {
+  width: 96.66666%;
 }
 
 
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 550px) and (max-width: 849px) { 
-  
+  .wrapper {
+      width: 97%;
+      max-width: 767px;
+  }
 
+.col-1,
+.col-3 {
+  width: 96.66666%;
+}
+
+.menu-list {
+  height: auto;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+div.row {
+  padding: 0 2em;
+}
+aside[class*='sidebar'] {
+  float: left;
+  width: 47%;
+  margin-right: 3%;
+}
+
+nav a {
+      padding: 0em 1em 0em 1em;
+  }
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 850px) { 
+  .wrapper {
+      width: 97%;
+      max-width: 1200px;
+  }
+
+  .menu-list {
+    height: auto;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  [class*='col-'] {
+    float: left;
+    margin-left: 3.33333%;
+    min-height: 1px;
+  }
+  .col-1 {
+    width: 20.83333%;
+  }
+
+  .col-3 {
+    width: 69.16665%;
+  }
+
+  h2 {
+    font-size: 3em;
+    border-bottom: 2px dotted #c80060;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  div.row {
+    padding: 0;
+  }
   
+  nav a {
+      padding: 0em 1em 0em 1em;
+  }
 }
