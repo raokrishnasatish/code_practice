@@ -1,0 +1,44 @@
+.wrapper {
+	display: grid;
+	grid-gap: 10px;
+	font-family: Arial, sans-serif;
+	grid-template-columns: auto;
+	grid-auto-rows: auto;
+	grid-template-areas:
+		"header"
+		"article"
+		"aside";
+}
+.wrapper > * {
+	padding: 1em;
+	border-radius: 1em;
+}
+header {
+	grid-area: header;
+	background-color: blue;
+	color: white;
+}
+article {
+	grid-area: article;
+	background-color: green;
+	color: white;
+}
+aside {
+	grid-area: aside;
+	background-color: yellow;
+}
+
+@media (min-width: 650px) and (max-width: 999px) { 
+	.wrapper {
+		grid-template-areas:
+			"article aside"
+			"header header";
+	}
+}
+@media (min-width: 1000px) { 
+	.wrapper {
+		grid-template-areas:
+			"header header"
+			"aside article";
+	}
+}

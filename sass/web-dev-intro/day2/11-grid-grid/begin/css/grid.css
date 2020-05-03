@@ -1,0 +1,193 @@
+/* Border box declaration 
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after
+ */
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-family: Arial, Geneva, sans-serif;
+}
+a {
+	color: #2772B0;
+}
+.wrapper {
+	width: 97%;
+	margin: 0 auto;
+	float: none;
+}
+/* hack to make images flexible in our prototype */
+div img {
+	width: 100%;
+}
+/* grid system */
+.wrapper {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 23% 23% 23% 23%;
+	grid-gap: 10px;
+	margin: 2%;
+}
+
+[class*="col-"] {
+	border: 1px solid black;
+}
+
+.col-1, .col-2, .col-3, .col-4 {
+	background-color: #ffc;
+}
+
+.col-5, .col-6 {
+	background-color: #ccf;
+}
+
+.col-7, .col-8 {
+	background-color: #fcf;
+}
+
+.col-9 {
+	background-color: #cff;
+}
+
+.col-10, .col-11, .col-12{
+	background-color: #ccf;
+}
+
+.col-1 {
+	grid-row: 1/2;
+	grid-column: 1/2;
+}
+
+.col-2 {
+	grid-row: 1/2;
+	grid-column: 2/3;
+} 
+
+.col-3 {
+	grid-row: 1/2;
+	grid-column: 3/4;
+}
+
+.col-4 {
+	grid-row: 1/2;
+	grid-column: 4/5;
+}
+
+.col-5 {
+	grid-row: 2/3;
+	grid-column: 1/3;
+
+}
+
+.col-6 {
+	grid-row: 2/3;
+	grid-column: 3/5;
+}
+
+.col-7 {
+	grid-row: 3/4;
+	grid-column: 1/2;
+}
+
+.col-8 {
+	grid-row: 3/4;
+	grid-column: 2/5;
+}
+
+.col-9 {
+	grid-row: 4/5;
+	grid-column: 1/5;
+}
+
+.col-10 {
+	grid-row: 5/6;
+	grid-column: 1/2;
+}
+
+.col-11 {
+	grid-row: 5/6;
+	grid-column: 2/4;
+}
+
+.col-12 {
+	grid-row: 5/6;
+	grid-column: 4/5;
+}
+
+/* Tablet Landscape Screen Sizes */
+@media only screen and (max-width: 768px)  {
+	.wrapper {
+		grid-template-columns: repeat( 4 1fr);
+		grid-template-rows: repeat(5 auto);
+	}
+
+	.col-1 {
+		grid-column: 1/3;
+	}
+	
+	.col-2 {
+		grid-column: 3/5;
+	} 
+	
+	.col-3 {
+		grid-column: 1/3;
+	}
+	
+	.col-4 {
+		grid-column: 3/5;
+	}
+	
+	.col-5 {
+		grid-column: 1/3;
+	
+	}
+	
+	.col-6 {
+		grid-column: 3/5;
+	}
+	
+	.col-7 {
+		grid-column: 1/3;
+	}
+	
+	.col-8 {
+		grid-column: 3/5;
+	}
+	
+	.col-9 {
+		grid-column: 1/5;
+	}
+	
+	.col-10 {
+		grid-column: 1/3;
+		grid-row: 9/10;
+	}
+	
+	.col-11 {
+		grid-column: 1/5;
+		grid-row: 7/8;
+	}
+	
+	.col-12 {
+		grid-column: 3/5;
+		grid-row: 9/10;
+	}
+
+}
+/* Mobile screen Sizes */
+@media only screen and (max-width: 480px) {
+	.wrapper {
+		display: block;
+	}
+
+	[class*="col-"] {
+		margin: 2%;
+	}
+}
+
