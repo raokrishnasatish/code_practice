@@ -1,0 +1,100 @@
+:root {
+    font-size: 16px;
+    font-family: monospace;
+    text-align: justify;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.item-grid-1 {
+    background-color: red;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 4;
+}
+
+.item-grid-2 {
+    background-color: blue;
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 4;
+}
+
+.item-grid-3 {
+    background-color: yellow;
+    grid-column: 2 / span 2;
+    grid-row: 2 / 4;
+}
+
+ul li:nth-of-type(2) {
+    color: green;
+}
+
+ul > li {
+
+}
+
+ul li::before {
+    content: "\2022";
+    color: red;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+.item-grid {
+    border: 1px solid black;
+}
+
+.header-index {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.header-index > a {
+    font-size: 2rem;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 1%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header"
+        "r1c1 r1c2"
+        "r2c1 r2c2";
+}
+
+h2 {
+    grid-area: header;
+}
+
+img {
+    display:block;
+    float: left;
+    grid-area: r1c2;
+    margin: 10px;
+}
+
+.p-class{
+    margin: 10px;
+}
+
+.register-form {
+    display: block;
+    margin: 20px;
+}
+
+p:last-of-type {
+    color: red;
+}
+
+div:last-child {
+    color: blue;
+}
