@@ -1,33 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
+
 <body>
 
-  We're coming soon
+  <div class="grid-wrapper">
+    <div class="brand-logo">
+      <img src="./images/logo.svg" alt="Base Apparel Logo">
+    </div>
 
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
+    <div class="image-wrap">
+      <!--
+      <img src="./images/hero-mobile.jpg" srcset="./images/hero-desktop.jpg 600w" alt="brand inage">
+      -->
+      
+        <picture>
+        <source media="(min-width: 650px)" srcset="./images/hero-desktop.jpg">
+        <img src="./images/hero-mobile.jpg" alt="brand image">
+        </picture>
+      
+    </div>
 
-  Email Address
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+    <div class="main-content">
+      <h1 class=heading><span>We're</span> coming soon</h1>
+      <p>
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+
+      <form class="enquiry-form">
+        <input id="email" type="email" placeholder="Email Address">
+        <button id="btn-email-submit" onclick="validateEmail()">></button>
+      </form>
+      <div id="error_msg">
+      </div>
+    </div>
+    <footer class="footer-class">
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer>
+  </div>
+
+
+
+  <script>
+    const validateEmail = () => {
+
+      const regExpString = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      const emailObj = document.getElementById("email");
+      document.getElementById("error_msg").innerHTML = "";
+      event.preventDefault();
+
+      if (!(emailObj.value != "" && (regExpString).test(emailObj.value))) {
+        document.getElementById("error_msg").innerHTML = "Please enter a valid email";
+        emailObj.style.borderColor = "red";
+        emailObj.setCustomValidity("Invalid");
+      }
+    };
+  </script>
 </body>
+
 </html>
