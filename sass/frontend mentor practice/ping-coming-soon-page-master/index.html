@@ -1,34 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Ping coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles/styles.css">
+<title>Frontend Mentor | Ping coming soon page</title>
+<script src="https://kit.fontawesome.com/bbf4194a22.js" crossorigin="anonymous"></script>
+</head>
+
 <body>
 
-  We are launching soon!
+  <div class="wrapper">
 
-  Subscribe and get notified
+    <div class="logo">
+      <img src="./images/logo.svg" alt="Ping Logo">
+    </div>
 
-  Notify Me
+    <div class="coming">
+      We are launching <span>soon!</span>
+    </div>
 
-  &copy; Copyright Ping. All rights reserved.
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+    <p>
+      Subscribe and get notified
     </p>
-  </footer>
+
+    <form action="" class="notify-form">
+      <input type="email" id="email" placeholder="Your Email Address">
+      <div id="err_msg"></div>
+      <button id="btn-notify" onclick="validateEmail()">Notify Me</button>
+    </form>
+
+    <div class="stats">
+      <img src="./images/illustration-dashboard.png" alt="">
+    </div>
+
+    <div class="social">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+
+    <div class="copy-right">
+      &copy; Copyright Ping. All rights reserved.
+    </div>
+
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    const validateEmail = () => {
+
+      event.preventDefault();
+      const regExp = /^\w+([\.-]\w+)*@\w+([\.]\w+){1,2}$/;
+      const emailObj = document.getElementById("email");
+      const errorObj = document.getElementById("err_msg");
+      errorObj.innerHTML = "";
+      emailObj.style.borderColor = "hsl(223, 100%, 88%)";
+
+      if(!(emailObj.value !="" && regExp.test(emailObj.value))) {
+        errorObj.innerHTML = "Please enter a valid email";
+        emailObj.style.borderColor = "red";
+      }
+
+    }
+  </script>
+
 </body>
+
 </html>

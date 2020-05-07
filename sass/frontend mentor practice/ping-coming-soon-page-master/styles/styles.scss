@@ -1,0 +1,169 @@
+$primary: hsl(223, 87%, 63%);
+$secondary-blue: hsl(223, 100%, 88%);
+$secondary-red: hsl(354, 100%, 66%);
+$nuetral-gray: hsl(0, 0%, 59%);
+$nuetral-deep-blue: hsl(209, 33%, 12%);
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 16px;
+}
+
+.wrapper {
+
+    font-size: 1rem;
+
+    .logo {
+        margin: 20px;
+        text-align: center;
+
+        img {
+            display: inline-block;
+            object-fit: contain;
+            height: 40px
+        }
+    }
+
+    .coming {
+
+        font-size: 1.5em;
+        text-align: center;
+        margin: 20px auto 10px auto;
+
+        span {
+            
+            font-weight: 700;
+        }
+    }
+
+    p {
+        margin: 30px auto 10px auto;
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .notify-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "input-1 input-1"
+            "error-msg error-msg"
+            "form-button form-button";
+        margin: 10px auto;
+        font-size: 1em;
+
+        #email {
+            grid-area: input-1;
+            width: 75%;
+            height: 40px;
+            border-radius: 40px;
+            border: 1px solid $secondary-blue;
+            font-size: 1.2em;
+            padding-left: 20px;
+            margin: 2px auto;
+
+            &::placeholder {
+                color: $nuetral-gray;
+                font-size: 0.6em;
+            }
+        }
+
+        #err_msg {
+            grid-area: error-msg;
+            color: $secondary-red;
+            text-align: center;
+            width: 75%;
+            margin: 2px auto;
+        }
+
+        #btn-notify{
+            grid-area: form-button;
+            width: 75%;
+            height: 40px;
+            border-radius: 40px;
+            background-color: $primary;
+            color: $secondary-blue;
+            font-size: 1em;
+            margin: 2px auto;
+        }
+    }
+
+    .stats {
+        width:100%;
+        text-align: center;
+        margin: 30px auto;
+
+        img {
+            width: 90%;
+            display: inline-block;
+            object-fit: contain;
+        }
+    }
+
+    .social {
+        text-align: center;
+        font-size: 1.2em;
+        word-spacing: 1em;
+    }
+
+    .copy-right {
+        margin: 10px auto;
+        text-align: center;
+        font: 1em;
+    }
+
+    footer {
+        .attribution {
+            margin: 20px auto;
+            font-size: 0.7em;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+
+}
+
+@media only screen and (min-width: 480px) {
+
+    .wrapper {
+        .notify-form {
+            grid-template-areas: 
+            "input-1 form-button"
+            "error-msg .";
+
+            #email {
+                width: 70%;
+                justify-self: flex-end;
+                margin: 5px;
+            }
+
+            #err_msg {
+                width: 70%;
+                justify-self: flex-end;
+                margin: 5px;
+            }
+
+            #btn-notify{
+                width: 70%;
+                justify-self: flex-start;
+                margin: 5px;
+            }
+        }
+    }
+}

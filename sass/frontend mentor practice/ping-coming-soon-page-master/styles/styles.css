@@ -1,0 +1,178 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 16px;
+}
+
+.wrapper {
+  font-size: 1rem;
+}
+
+.wrapper .logo {
+  margin: 20px;
+  text-align: center;
+}
+
+.wrapper .logo img {
+  display: inline-block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 40px;
+}
+
+.wrapper .coming {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 20px auto 10px auto;
+}
+
+.wrapper .coming span {
+  font-weight: 700;
+}
+
+.wrapper p {
+  margin: 30px auto 10px auto;
+  font-size: 1em;
+  text-align: center;
+}
+
+.wrapper .notify-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "input-1 input-1" "error-msg error-msg" "form-button form-button";
+  margin: 10px auto;
+  font-size: 1em;
+}
+
+.wrapper .notify-form #email {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: input-1;
+  width: 75%;
+  height: 40px;
+  border-radius: 40px;
+  border: 1px solid #c2d3ff;
+  font-size: 1.2em;
+  padding-left: 20px;
+  margin: 2px auto;
+}
+
+.wrapper .notify-form #email::-webkit-input-placeholder {
+  color: #969696;
+  font-size: 0.6em;
+}
+
+.wrapper .notify-form #email:-ms-input-placeholder {
+  color: #969696;
+  font-size: 0.6em;
+}
+
+.wrapper .notify-form #email::-ms-input-placeholder {
+  color: #969696;
+  font-size: 0.6em;
+}
+
+.wrapper .notify-form #email::placeholder {
+  color: #969696;
+  font-size: 0.6em;
+}
+
+.wrapper .notify-form #err_msg {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: error-msg;
+  color: #ff5263;
+  text-align: center;
+  width: 75%;
+  margin: 2px auto;
+}
+
+.wrapper .notify-form #btn-notify {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: form-button;
+  width: 75%;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #4f7df3;
+  color: #c2d3ff;
+  font-size: 1em;
+  margin: 2px auto;
+}
+
+.wrapper .stats {
+  width: 100%;
+  text-align: center;
+  margin: 30px auto;
+}
+
+.wrapper .stats img {
+  width: 90%;
+  display: inline-block;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.wrapper .social {
+  text-align: center;
+  font-size: 1.2em;
+  word-spacing: 1em;
+}
+
+.wrapper .copy-right {
+  margin: 10px auto;
+  text-align: center;
+  font: 1em;
+}
+
+.wrapper footer .attribution {
+  margin: 20px auto;
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.wrapper footer .attribution a {
+  color: #3e52a3;
+}
+
+@media only screen and (min-width: 480px) {
+  .wrapper .notify-form {
+        grid-template-areas: "input-1 form-button" "error-msg .";
+  }
+  .wrapper .notify-form #email {
+    width: 70%;
+    justify-self: flex-end;
+    margin: 5px;
+  }
+  .wrapper .notify-form #err_msg {
+    width: 70%;
+    justify-self: flex-end;
+    margin: 5px;
+  }
+  .wrapper .notify-form #btn-notify {
+    width: 70%;
+    justify-self: flex-start;
+    margin: 5px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
