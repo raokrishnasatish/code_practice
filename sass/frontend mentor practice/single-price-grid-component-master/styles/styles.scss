@@ -1,0 +1,239 @@
+:root {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    display: block;
+
+    .main-content {
+        background-color: white;
+        display: inline-block;
+        width: 100%;
+        line-height: 2rem;
+        font-size: 1rem;
+
+        h1 {
+            color: hsl(179, 62%, 43%);
+            width: 80%;
+            font-weight: 700;
+            margin: auto;
+            padding: 10px 0px;
+        }
+
+        .promotion {
+            color: hsl(71, 73%, 54%);
+            width: 80%;
+            font-size: 1em;
+            font-weight: 700;
+            margin: auto;
+            padding: 10px 0px;
+        }
+
+        .promo-desc {
+            color: hsl(218, 22%, 67%);
+            width: 80%;
+            text-align: justify;
+            font-weight: 400;
+            font-size: 1em;
+            margin: auto;
+            padding: 10px 0px;
+        }
+    }
+
+    .subscr {
+        background-color: hsl(179, 62%, 43%);
+        display: inline-block;
+        width: 100%;
+        font-size: 1rem;
+        line-height: 2rem;
+
+        .sub-head {
+            color: hsl(204, 43%, 93%);
+            font-size: 1.5em;
+            font-weight: 700;
+            margin: 10px auto;
+            padding: 10px 0px;
+            width: 80%;
+        }
+
+        .sub-amt {
+            margin: 10px auto;
+            width: 80%;
+            color: hsl(187, 95%, 69%);
+
+            span {
+                font-size: 1.5em;
+                color: white;
+                padding: 10px 10px 10px 0px;
+            }
+        }
+
+        .sub-period {
+            margin: 10px auto;
+            width: 80%;
+            font-size: 1em;
+            font-weight: 400;
+            color: hsl(204, 43%, 93%);
+        }
+
+        .sub-btn {
+            margin: 20px 50px;
+            width: 60%;
+            background-color: #c0df34;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 1.3em;
+            box-shadow: 0px 2px 8px 1px #516303;
+            color: white;
+            height: 40px;
+            letter-spacing: 2px;
+            border-radius: 5px;
+        }
+    }
+
+    .merits {
+        background-color: #218a879e;
+        display: inline-block;
+        width: 100%;
+
+        .merit-head {
+            color: hsl(204, 43%, 93%);
+            font-weight: 700;
+            margin: 10px auto;
+            padding: 10px 0px;
+            width: 80%;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+
+        .merit-body {
+            color: hsl(217, 21%, 88%);
+            width: 80%;
+            margin: 10px auto 30px;
+            font-size: 1.1em;
+            font-weight: 400;
+            line-height: 1.3em;
+        }
+    }
+
+    footer {
+        margin: 30px;
+
+        .attribution {
+            font-size: 0.8rem;
+            text-align: center;
+            margin: auto;
+        }
+    
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}
+
+@media only screen and (min-width: 560px) {
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "content-1 content-1"
+            "subscr-1 merit-1"
+            "footer-1 footer-1";
+
+        .main-content {
+            grid-area: content-1;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .subscr {
+            grid-area: subscr-1;
+            font-size: 1.1rem;
+
+            .sub-head {
+                margin-top: 30px;
+            }
+
+            .sub-amt {
+                margin-top: 30px;
+            }
+
+            .sub-period {
+                margin-top: 30px;
+            }
+
+            .sub-btn {
+                margin-top: 30px;
+                margin-left: 70px;            }
+        }
+
+        .merits {
+            grid-area: merit-1;
+            font-size: 1rem;
+        }
+
+        footer {
+            grid-area: footer-1;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 800px) {
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "content-1 content-1"
+            "subscr-1 merit-1"
+            "footer-1 footer-1";
+
+        .main-content {
+            grid-area: content-1;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .subscr {
+            grid-area: subscr-1;
+            font-size: 1.5rem;
+
+            .sub-head {
+                margin-top: 30px;
+            }
+
+            .sub-amt {
+                margin-top: 30px;
+            }
+
+            .sub-period {
+                margin-top: 30px;
+            }
+
+            .sub-btn {
+                margin-top: 30px;
+                margin-left: 70px;            }
+        }
+
+        .merits {
+            grid-area: merit-1;
+            font-size: 1.5rem;
+        }
+
+        footer {
+            grid-area: footer-1;
+        }
+    }
+
+}

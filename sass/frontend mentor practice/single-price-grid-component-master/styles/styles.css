@@ -1,0 +1,244 @@
+:root {
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrapper {
+  display: block;
+}
+
+.wrapper .main-content {
+  background-color: white;
+  display: inline-block;
+  width: 100%;
+  line-height: 2rem;
+  font-size: 1rem;
+}
+
+.wrapper .main-content h1 {
+  color: #2ab2af;
+  width: 80%;
+  font-weight: 700;
+  margin: auto;
+  padding: 10px 0px;
+}
+
+.wrapper .main-content .promotion {
+  color: #c0df34;
+  width: 80%;
+  font-size: 1em;
+  font-weight: 700;
+  margin: auto;
+  padding: 10px 0px;
+}
+
+.wrapper .main-content .promo-desc {
+  color: #98a6bd;
+  width: 80%;
+  text-align: justify;
+  font-weight: 400;
+  font-size: 1em;
+  margin: auto;
+  padding: 10px 0px;
+}
+
+.wrapper .subscr {
+  background-color: #2ab2af;
+  display: inline-block;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.wrapper .subscr .sub-head {
+  color: #e5eff5;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 10px auto;
+  padding: 10px 0px;
+  width: 80%;
+}
+
+.wrapper .subscr .sub-amt {
+  margin: 10px auto;
+  width: 80%;
+  color: #65eafb;
+}
+
+.wrapper .subscr .sub-amt span {
+  font-size: 1.5em;
+  color: white;
+  padding: 10px 10px 10px 0px;
+}
+
+.wrapper .subscr .sub-period {
+  margin: 10px auto;
+  width: 80%;
+  font-size: 1em;
+  font-weight: 400;
+  color: #e5eff5;
+}
+
+.wrapper .subscr .sub-btn {
+  margin: 20px 50px;
+  width: 60%;
+  background-color: #c0df34;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.3em;
+  -webkit-box-shadow: 0px 2px 8px 1px #516303;
+          box-shadow: 0px 2px 8px 1px #516303;
+  color: white;
+  height: 40px;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+
+.wrapper .merits {
+  background-color: #218a879e;
+  display: inline-block;
+  width: 100%;
+}
+
+.wrapper .merits .merit-head {
+  color: #e5eff5;
+  font-weight: 700;
+  margin: 10px auto;
+  padding: 10px 0px;
+  width: 80%;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.wrapper .merits .merit-body {
+  color: #dadfe7;
+  width: 80%;
+  margin: 10px auto 30px;
+  font-size: 1.1em;
+  font-weight: 400;
+  line-height: 1.3em;
+}
+
+.wrapper footer {
+  margin: 30px;
+}
+
+.wrapper footer .attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  margin: auto;
+}
+
+.wrapper footer .attribution a {
+  color: #3e52a3;
+}
+
+@media only screen and (min-width: 560px) {
+  .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "content-1 content-1" "subscr-1 merit-1" "footer-1 footer-1";
+  }
+  .wrapper .main-content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: content-1;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  .wrapper .subscr {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: subscr-1;
+    font-size: 1.1rem;
+  }
+  .wrapper .subscr .sub-head {
+    margin-top: 30px;
+  }
+  .wrapper .subscr .sub-amt {
+    margin-top: 30px;
+  }
+  .wrapper .subscr .sub-period {
+    margin-top: 30px;
+  }
+  .wrapper .subscr .sub-btn {
+    margin-top: 30px;
+    margin-left: 70px;
+  }
+  .wrapper .merits {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: merit-1;
+    font-size: 1rem;
+  }
+  .wrapper footer {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: footer-1;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "content-1 content-1" "subscr-1 merit-1" "footer-1 footer-1";
+  }
+  .wrapper .main-content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: content-1;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  .wrapper .subscr {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: subscr-1;
+    font-size: 1.5rem;
+  }
+  .wrapper .subscr .sub-head {
+    margin-top: 30px;
+  }
+  .wrapper .subscr .sub-amt {
+    margin-top: 30px;
+  }
+  .wrapper .subscr .sub-period {
+    margin-top: 30px;
+  }
+  .wrapper .subscr .sub-btn {
+    margin-top: 30px;
+    margin-left: 70px;
+  }
+  .wrapper .merits {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: merit-1;
+    font-size: 1.5rem;
+  }
+  .wrapper footer {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: footer-1;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
