@@ -1,0 +1,150 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*.after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #674baf;
+  background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 90%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: auto;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.wrapper .logo {
+  margin: 30px 0px;
+  width: 40%;
+}
+
+.wrapper .main-image {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.wrapper .main-image img {
+  width: 80%;
+}
+
+.wrapper .tag-line {
+  font-size: 1.7em;
+  font-weight: 400;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  text-align: center;
+}
+
+.wrapper .tag-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.wrapper .btn-register {
+  background-color: white;
+  border-radius: 25px;
+  height: 40px;
+  width: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #674baf;
+  padding-top: 6px;
+  margin-top: 20px;
+}
+
+.wrapper .social {
+  margin: 30px;
+  letter-spacing: 1.5em;
+}
+
+.wrapper footer {
+  margin-bottom: 100px;
+}
+
+.wrapper footer .attribution {
+  font-size: 0.8em;
+}
+
+.wrapper footer .attribution a {
+  color: white;
+}
+
+@media only screen and (min-width: 900px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    font-size: 1rem;
+  }
+  .wrapper .logo {
+    margin: 30px 0px;
+    width: 20%;
+  }
+  .wrapper .main-image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  .wrapper .main-image img {
+    width: 80%;
+  }
+  .wrapper .tag-line {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  .wrapper .tag-content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  .wrapper .btn-register {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  .wrapper footer {
+    margin-bottom: 100px;
+  }
+  .wrapper footer .attribution {
+    font-size: 0.8em;
+  }
+  .wrapper footer .attribution a {
+    color: white;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

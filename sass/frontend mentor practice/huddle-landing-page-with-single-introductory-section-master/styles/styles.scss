@@ -1,0 +1,150 @@
+$violet: hsl(257, 40%, 49%);
+$poppins: 'Poppins', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*.after {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: $violet;
+    background-image: url("../images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    color: white;
+    font-family: $poppins;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    width: 90%;
+    align-content: center;
+    margin: auto;
+    font-size: 1rem;
+    text-align: center;
+
+    .logo {
+        margin: 30px 0px;
+        width: 40%;
+    }
+
+    .main-image {
+        flex-basis: 100%;
+
+        img {
+            width: 80%;
+        }
+    }
+
+    .tag-line {
+        font-size: 1.7em;
+        font-weight: 400;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .tag-content {
+        text-align: center;
+        font-family: $open-sans;
+        font-size: 1.1em;
+        font-weight: 400;
+    }
+
+    .btn-register {
+        background-color: white;
+        border-radius: 25px;
+        height: 40px;
+        width: 50%;
+        align-self: center;
+        color: $violet;
+        padding-top: 6px;
+        margin-top: 20px;
+    }
+
+    .social {
+        margin: 30px;
+        letter-spacing: 1.5em;
+
+    }
+
+    footer {
+        margin-bottom: 100px;
+        .attribution {
+            font-size: 0.8em;
+
+        }
+    
+        .attribution a {
+            color: white;
+        }
+    }
+}
+
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 900px) {
+    
+    .wrapper {
+        flex-flow: column wrap;
+        font-size: 1rem;
+
+
+        .logo {
+            margin: 30px 0px;
+            width: 20%;
+        }
+    
+        .main-image {
+            flex: 0 0 50%;
+    
+            img {
+                width: 80%;
+            }
+        }
+    
+        .tag-line {
+            flex: 0 0 50%;
+        }
+    
+        .tag-content {
+            flex: 0 0 50%;
+        }
+    
+        .btn-register {
+            flex: 0 0 50%;
+
+        }
+    
+        .social {
+
+    
+        }
+    
+        footer {
+            margin-bottom: 100px;
+            .attribution {
+                font-size: 0.8em;
+    
+            }
+        
+            .attribution a {
+                color: white;
+            }
+        }
+    }
+}
