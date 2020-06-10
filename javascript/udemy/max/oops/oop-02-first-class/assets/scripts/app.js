@@ -124,10 +124,13 @@ class ProductItem {
     renderProductCard() {
         const cardContainer = document.getElementById("card-deck");
 
+        const cardDivEl = document.createElement("div");
+        cardDivEl.className = "col-sm-3";
+        cardContainer.appendChild(cardDivEl);
+
         const cardEl = document.createElement("div");
         cardEl.className = "card";
-        cardEl.style.width = "18rem";
-        cardContainer.appendChild(cardEl);
+        cardDivEl.appendChild(cardEl);
 
         const cardImgEl = document.createElement("img");
         cardImgEl.className = "card-img-top";
